@@ -196,7 +196,7 @@ p {
   margin: 20px;
   right: 150px;
   border-radius: 10%;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
 }
 
 .project-overlay-left {
@@ -212,7 +212,7 @@ p {
   height: 100px;
   font-size: 19px;
   transform: translateY(-50%);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
 }
 
 .project-title-left {
@@ -248,7 +248,7 @@ p {
   margin: 20px;
   left: 150px;
   border-radius: 10%;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
 }
 
 .project-overlay-right {
@@ -264,7 +264,7 @@ p {
   height: 100px;
   font-size: 19px;
   transform: translateY(-50%);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
   text-align : right;
 }
 
@@ -294,19 +294,33 @@ p {
   right: 15%;
 }
 
-#circle_index,
-#circle_cv,
-#circle_portfolio,
-#circle_blog,
-#circle_connect,
-#circle_contact {
+/* transition circles */
+
+#circle-index,
+#circle-cv,
+#circle-portfolio,
+#circle-blog,
+#circle-connect,
+#circle-contact {
   position: absolute;
   transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
+  width: 0;
+  height: 0;
   border-radius: 50%;
   background-color: #0a6164;
   opacity: 0;
   transition: top 1s, width 1s, height 1s;
   z-index: 9999;
+}
+
+#starting-circle {
+  position: absolute;
+  transform: translateX(-50%);
+  width: 5000px;
+  height: 5000px;
+  top: -1000px;
+  border-radius: 50%;
+  background-color: #0a6164;
+  z-index: 9999;
+  transition: top 1s, width 1s, height 1s;
 }
