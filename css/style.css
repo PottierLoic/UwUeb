@@ -265,6 +265,7 @@ p {
   font-size: 19px;
   transform: translateY(-50%);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  text-align : right;
 }
 
 .project-title-right {
@@ -291,4 +292,21 @@ p {
   font-size:25px;
   margin: 0px;
   right: 15%;
+}
+
+#circle_index,
+#circle_cv,
+#circle_portfolio,
+#circle_blog,
+#circle_connect,
+#circle_contact {
+  position: absolute;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0a6164;
+  opacity: 0;
+  transition: top 1s, width 1s, height 1s;
+  z-index: 9999;
 }
