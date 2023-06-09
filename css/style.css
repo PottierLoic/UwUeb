@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+:root {
+  --text_color1: #cbf7ff;
+}
+
+* {
+  font-family: 'Poppins';
+}
+
+body {
+  margin:0;
+}
+
+h1 {
+  font-family: 'Georgia', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+
+p {
+  font-family: 'Georgia', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, #0E8388 0%, #2C3333 100%);
+  color:var(--text_color1)
+}
+
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px;
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: #CBE4DE
+}
+
+/* Waves animation */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% {
+    transform: translate3d(85px,0,0);
+  }
+}
+
+/* start of typing animation part */
+.wrapper {
+  height: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.typing {
+  visibility: hidden;
+  font-family: "Georgia";
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 2em;
+  color: var(--text_color1)
+}
+
+.typing1 {
+  width: 20ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  animation-fill-mode: forwards;
+}
+
+.typing2 {
+  width: 19ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  animation-delay: 2s;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+  to {
+    border-color: transparent
+  }
+}
+
+@keyframes blink {
+  0% { visibility: visible; }
+  50% { border-color: transparent }
+}
+
+/* head-menu */
+
+.head-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.head-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-menu ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.head-menu ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: var(--text_color1);
+  border-radius: 20px;
+}
+
+.head-menu ul li a:hover,
+.head-menu ul li a.active {
+  background: #0E8388;
+}
+
+/* after waves */
+.presentation {
+  background-color: #CBE4DE;
+  width: 100%;
+  height: 100vh;
+}
