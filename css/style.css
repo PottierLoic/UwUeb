@@ -174,8 +174,121 @@ p {
 }
 
 /* after waves */
-.presentation {
+.bellow-content {
   background-color: #CBE4DE;
   width: 100%;
-  height: 100vh;
+  height: 500vh;
+  color: #0E8388;
+}
+
+/* project container */
+.project-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  height: 70vh;
+  padding-bottom: 50px;
+}
+
+/* left */
+.project-image-left {
+  position: absolute;
+  margin: 20px;
+  right: 150px;
+  border-radius: 10%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.project-overlay-left {
+  position: absolute;
+  top: 240px;
+  left: 15%;
+  background-color: #0E8388;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  word-wrap: break-word;
+  width: 400px;
+  height: 100px;
+  font-size: 19px;
+  transform: translateY(-50%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.project-title-left {
+  position:absolute;
+  top: 160px;
+  font-family: 'Georgia', sans-serif;
+  color: #0a6164;
+  font-weight:300;
+  padding-left: 10px;
+  letter-spacing: 2px;
+  font-size:25px;
+  margin: 0px;
+  left: 15%;
+}
+
+.project-github-left {
+  position:absolute;
+  top: 340px;
+  font-family: 'Georgia', sans-serif;
+  color: #0a6164;
+  font-weight:300;
+  padding-left: 10px;
+  letter-spacing: 2px;
+  font-size:25px;
+  margin: 0px;
+  left: 15%;
+}
+
+/* right */
+
+.project-image-right {
+  position: absolute;
+  margin: 20px;
+  left: 150px;
+  border-radius: 10%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.project-overlay-right {
+  position: absolute;
+  top: 240px;
+  right: 15%;
+  background-color: #0E8388;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  word-wrap: break-word;
+  width: 400px;
+  height: 100px;
+  font-size: 19px;
+  transform: translateY(-50%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.project-title-right {
+  position:absolute;
+  top: 160px;
+  font-family: 'Georgia', sans-serif;
+  color: #0a6164;
+  font-weight:300;
+  padding-left: 10px;
+  letter-spacing: 2px;
+  font-size:25px;
+  margin: 0px;
+  right: 15%;
+}
+
+.project-github-right {
+  position:absolute;
+  top: 340px;
+  font-family: 'Georgia', sans-serif;
+  color: #0a6164;
+  font-weight:300;
+  padding-left: 10px;
+  letter-spacing: 2px;
+  font-size:25px;
+  margin: 0px;
+  right: 15%;
 }

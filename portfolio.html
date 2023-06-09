@@ -1,38 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <header>
-      <h1>Portfolio</h1>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loïc Pottier</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 
-    <nav>
+<body>
+  <div class="header">
+    <div class="head-menu">
       <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="cv.html">Curriculum Vitae</a></li>
-        <li>Portfolio</li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="connect.html">Connect</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>
+    </div>
 
-    <main>
-      <h3>Explorateur de fractales</h3>
-      <p>Programme écrit en V calculant en temps réel différentes fractales (Mandelbrot, Julia, Burning ship).</p>
-      <p>Utilise le multi-threading.</p>
-      <img src="img/fractal.png" width="720" height="480">
-      <h3>IA Démineur</h3>
-      <p>Jeu programmé en python, ia activable pour completer automatiquement la grille.</p>
-    </main>
+    <!-- Title text / typing anim -->
+    <div class="inner-header flex">
+      <div class="wrapper">
+          <div class="typing1 typing">
+            Welcome to my portfolio !
+          </div>
+          <div class="typing2 typing">
+            Scroll to see my projects
+          </div>
+      </div>
+    </div>
 
-    <footer>
-    <!-- Pied de page -->
-    </footer>
-  </body>
+    <!-- bottom waves -->
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(203, 228, 222,0.7" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(203, 228, 222,0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(203, 228, 222,0.3)" />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="#CBE4DE" />
+          </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Inside waves content -->
+  <div class="content flex">
+    <!-- will probably stay empty, waves are so beautiful -->
+  </div>
+
+  <!-- Bellow waves content -->
+  <div class="bellow-content">
+    <!-- Fractal generator -->
+    <div class="project-container">
+      <p class="project-title-left">Fractal generator<p>
+      <img class="project-image-left" src="img/fractal.png" width="720" height="480">
+      <p class="project-overlay-left">Program written in V that calculate and display multiple fractals (Mandelbrot, Julia, Burning ship), use CPU multi-threading.</p>
+      <a class="project-github-left" href="https://github.com/PottierLoic/Fractal"><img src="img/github-mark.svg" width="40" height="40" alt=""></a>
+    </div>
+
+    <!-- Milo's refuge -->
+    <div class="project-container">
+      <p class="project-title-right">Milo's refuge</p>
+      <img class="project-image-right" src="img/milo.png" width="720" height="480">
+      <p class="project-overlay-right">Chill farning game made with Unity, you manage farms on differents islands and need to upgrade them.</p>
+      <a class="project-github-right" href="https://github.com/Lunary-Labs/Milo-s-refuge"><img src="img/github-mark.svg" width="40" height="40" alt=""></a>
+    </div>
+
+    <!-- Sandbox game -->
+    <div class="project-container">
+      <p class="project-title-left">Sandbox</p>
+      <img class="project-image-left" src="img/sandbox.png" width="720" height="480">
+      <p class="project-overlay-left">Sandbox game written in python, you can play with different elements that interact with each others.</p>
+      <a class="project-github-left" href="https://github.com/PottierLoic/Sandbox"><img src="img/github-mark.svg" width="40" height="40" alt=""></a>
+    </div>
+
+    <!-- Minesweeper AI -->
+    <div class="project-container">
+      <p class="project-title-right">Minesweeper AI</p>
+      <img class="project-image-right" src="img/minesweeper.png" width="720" height="480">
+      <p class="project-overlay-right">Game written in python, an AI can be activated to solve the board.</p>
+      <a class="project-github-left" href="https://github.com/PottierLoic/MineSweeperAI"><img src="img/github-mark.svg" width="40" height="40" alt=""></a>
+    </div>
+
+  </div>
+
+</body>
+
 </html>
