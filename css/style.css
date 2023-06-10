@@ -194,9 +194,15 @@ p {
 .project-image-left {
   position: absolute;
   margin: 20px;
-  right: 150px;
+  right: -100px;
   border-radius: 10%;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  transform: translateX(100px);
+  transition: transform 0.5s;
+}
+
+.project-image-left--visible {
+  transform: translateX(-60%);
 }
 
 .project-overlay-left {
@@ -246,9 +252,15 @@ p {
 .project-image-right {
   position: absolute;
   margin: 20px;
-  left: 150px;
+  left: -100px;
   border-radius: 10%;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  transform: translateX(100px);
+  transition: transform 0.5s;
+}
+
+.project-image-right--visible {
+  transform: translateX(60%);
 }
 
 .project-overlay-right {
