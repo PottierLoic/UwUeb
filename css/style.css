@@ -192,14 +192,6 @@ p {
 
 /* left */
 
-.project-text-left {
-  transition: transform 0.5s;
-}
-
-.project-text-left--visible {
-  transform: translateX(110%);
-}
-
 .project-image-left {
   position: absolute;
   margin: 20px;
@@ -214,7 +206,7 @@ p {
 }
 
 .project-overlay-left {
-  position: relative;
+  position: absolute;
   top: 180px;
   left: 15%;
   background-color: #0E8388;

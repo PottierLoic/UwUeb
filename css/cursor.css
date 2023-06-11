@@ -1,0 +1,24 @@
+html, a{
+  cursor: none;
+}
+
+#trail-cursor {
+	position: fixed;
+	display: block;
+	border-radius: 0;
+	transform-origin: center center;
+	mix-blend-mode: difference;
+	top: 0;
+	left: 0;
+	z-index: 10000000000000000;
+}
+.cursor-circle {
+	pointer-events: none;
+	height: 24px;
+	width: 24px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
