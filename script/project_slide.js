@@ -11,11 +11,11 @@ function isInViewport(element) {
 
 function animateElements() {
     image_left.forEach((element) => {
-        if (isInViewport(element)) 
+        if (isInViewport(element))
             element.classList.add('project-image-left--visible');
     });
     image_right.forEach((element) => {
-        if (isInViewport(element)) 
+        if (isInViewport(element))
             element.classList.add('project-image-right--visible');
     });
 }

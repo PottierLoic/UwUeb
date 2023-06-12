@@ -1,5 +1,5 @@
-let trailCursor = document.querySelector("#trail-cursor");
-let circles = trailCursor.getAttribute("data-circle");
+let trail_cursor = document.querySelector("#trail-cursor");
+let circles = trail_cursor.getAttribute("data-circle");
 let coords = {
 	x: 0,
 	y: 0
@@ -8,11 +8,11 @@ let coords = {
 for (i = 0; i < circles; i++) {
 	let div = document.createElement("div");
 	div.className = "cursor-circle";
-	trailCursor.appendChild(div);
+	trail_cursor.appendChild(div);
 }
 
-let allCricles = document.querySelectorAll(".cursor-circle");
-allCricles.forEach((el) => {
+let all_circles = document.querySelectorAll(".cursor-circle");
+all_circles.forEach((el) => {
 	el.x = 0;
 	el.y = 0;
 });
@@ -26,18 +26,18 @@ function anim_circle() {
 	let x = coords.x;
 	let y = coords.y;
 
-	allCricles.forEach((el, index) => {
+	all_circles.forEach((el, index) => {
 		el.style.left = x - el.clientHeight / 2 + "px";
 		el.style.top = y - el.clientHeight / 2 + "px";
 
-		el.style.scale = (allCricles.length - index) / allCricles.length;
+		el.style.scale = (all_circles.length - index) / all_circles.length;
 
 		el.x = x;
 		el.y = y;
 
-		let nxtCrcl = allCricles[index + 1] || allCricles[0];
-		x += (nxtCrcl.x - x) * 0.3;
-		y += (nxtCrcl.y - y) * 0.3;
+		let next_circle = all_circles[index + 1] || all_circles[0];
+		x += (next_circle.x - x) * 0.3;
+		y += (next_circle.y - y) * 0.3;
 	});
 
 	requestAnimationFrame(anim_circle);
