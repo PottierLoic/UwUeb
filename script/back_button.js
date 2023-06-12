@@ -1,16 +1,19 @@
-let btn = document.getElementById('back_button');
-let html = document.documentElement;
+let back_button = document.getElementById('back_button');
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
+function scroll() {
+  if (document.documentElement.scrollTop > 300) {
+    back_button.classList.add('show');
   } else {
-    btn.removeClass('show');
+    back_button.classList.remove('show');
   }
+}
+
+back_button.addEventListener("click", function(event) {
+  event.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
 
-btn.on('click', function(e) {
-  e.preventDefault();
-  html.animate({scrollTop:0}, '300');
-});
-
+window.addEventListener("scroll", scroll);
